@@ -76,8 +76,9 @@ nav {
 
 .logo-bar {
     width: 32px;
-    height: 2px;
+    height: 3px;
     background: #c9a962;
+    transition: all 0.3s ease;
 }
 
 .logo-mark:hover .logo-ms {
@@ -85,7 +86,8 @@ nav {
 }
 
 .logo-mark:hover .logo-bar {
-    box-shadow: 0 0 10px #c9a962;
+    box-shadow: 0 0 12px #c9a962;
+    width: 36px;
 }
 
 .logo-mark:focus {
@@ -161,7 +163,7 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(ellipse at 50% 0%, rgba(201,169,98,0.1) 0%, transparent 50%);
+    background: radial-gradient(ellipse at 50% 0%, rgba(201,169,98,0.115) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -221,12 +223,19 @@ nav {
     transform: translateX(-50%);
     opacity: 0;
     animation: fadeInUpScroll 0.8s ease 1s forwards, bounce 2s ease-in-out infinite 1.5s;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+    opacity: 0.7;
 }
 
 .scroll-indicator svg {
     width: 24px;
     height: 24px;
-    stroke: var(--text-muted);
+    stroke: var(--accent-gold);
 }
 
 @keyframes fadeInUp {
@@ -624,6 +633,7 @@ footer p {
     
     .logo .logo-bar {
         width: 26px;
+        height: 2px;
     }
 
     .nav-toggle {
