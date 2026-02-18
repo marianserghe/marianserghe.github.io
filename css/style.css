@@ -183,7 +183,7 @@ nav {
     font-size: clamp(64px, 12vw, 120px);
     font-weight: 400;
     letter-spacing: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     opacity: 0;
     animation: fadeInUpHero 0.8s ease 0.2s forwards;
     cursor: default;
@@ -198,7 +198,7 @@ nav {
     width: 64px;
     height: 3px;
     background: var(--accent-gold);
-    margin: 0 auto 10px auto;
+    margin: 0 auto 15px auto;
     opacity: 0;
     animation: fadeInUpHero 0.8s ease 0.35s forwards;
 }
