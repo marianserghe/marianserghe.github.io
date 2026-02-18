@@ -198,10 +198,9 @@ nav {
     width: 64px;
     height: 3px;
     background: var(--accent-gold);
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
     opacity: 0;
     animation: fadeInUpHero 0.8s ease 0.35s forwards;
-    align-self: center;
 }
 
 .hero-tagline {
