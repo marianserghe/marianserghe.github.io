@@ -108,3 +108,115 @@ if (form) {
         }
     });
 }
+
+// =================================================================
+// PHARMA PASSWORD PROTECTION
+// =================================================================
+(function() {
+    var PHARMA_PASSWORD = '1234';
+    var SESSION_KEY = 'pharma_unlocked';
+    var pendingProject = null;
+    
+    var modal = document.getElementById('password-modal');
+    var passwordInput = document.getElementById('pharma-password');
+    var submitBtn = document.getElementById('password-submit');
+    var cancelBtn = document.getElementById('password-cancel');
+    var errorMsg = document.getElementById('password-error');
+    
+    // Check if already unlocked this session
+    function isUnlocked() {
+        return sessionStorage.getItem(SESSION_KEY) === 'true';
+    }
+    
+    // Unlock pharma projects
+    function unlock() {
+        sessionStorage.setItem(SESSION_KEY, 'true');
+    }
+    
+    // Show modal
+    function showModal(projectUrl) {
+        pendingProject = projectUrl;
+        modal.classList.add('active');
+        passwordInput.value = '';
+        errorMsg.classList.remove('show');
+        setTimeout(function() {
+            passwordInput.focus();
+        }, 100);
+    }
+    
+    // Hide modal
+    function hideModal() {
+        modal.classList.remove('active');
+        pendingProject = null;
+        passwordInput.value = '';
+        errorMsg.classList.remove('show');
+    }
+    
+    // Handle pharma project click
+    function handlePharmaClick(e) {
+        var item = e.currentTarget;
+        var projectUrl = item.getAttribute('data-project');
+        
+        if (isUnlocked()) {
+            window.location.href = projectUrl;
+        } else {
+            showModal(projectUrl);
+        }
+    }
+    
+    // Verify password
+    function checkPassword() {
+        var entered = passwordInput.value;
+        
+        if (entered === PHARMA_PASSWORD) {
+            unlock();
+            hideModal();
+            if (pendingProject) {
+                window.location.href = pendingProject;
+            }
+        } else {
+            errorMsg.classList.add('show');
+            passwordInput.value = '';
+            passwordInput.focus();
+        }
+    }
+    
+    // Attach click handlers to pharma items
+    var pharmaItems = document.querySelectorAll('[data-category="pharma"]');
+    pharmaItems.forEach(function(item) {
+        item.addEventListener('click', handlePharmaClick);
+    });
+    
+    // Modal event listeners
+    if (submitBtn) {
+        submitBtn.addEventListener('click', checkPassword);
+    }
+    
+    if (cancelBtn) {
+        cancelBtn.addEventListener('click', hideModal);
+    }
+    
+    if (passwordInput) {
+        passwordInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+    }
+    
+    // Close modal on background click
+    if (modal) {
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                hideModal();
+            }
+        });
+    }
+    
+    // Close modal on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+            hideModal();
+        }
+    });
+})();

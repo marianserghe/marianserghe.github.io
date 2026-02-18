@@ -78,7 +78,7 @@
         
         <div class="portfolio-grid">
             <!-- Pharmaceutical -->
-            <div class="portfolio-item" onclick="window.location.href='projects/merck.html'" style="cursor: pointer;">
+            <div class="portfolio-item" data-project="projects/merck.html" data-category="pharma" style="cursor: pointer;">
                 <img src="assets/portfolio/merck-cover.jpg" alt="Merck">
                 <div class="portfolio-overlay">
                     <p class="portfolio-category">Pharmaceutical</p>
@@ -86,7 +86,7 @@
                 </div>
             </div>
             
-            <div class="portfolio-item" onclick="window.location.href='projects/amicus.html'" style="cursor: pointer;">
+            <div class="portfolio-item" data-project="projects/amicus.html" data-category="pharma" style="cursor: pointer;">
                 <img src="assets/portfolio/amicus-cover.jpg" alt="Amicus">
                 <div class="portfolio-overlay">
                     <p class="portfolio-category">Pharmaceutical</p>
@@ -102,7 +102,7 @@
                 </div>
             </div>
             
-            <div class="portfolio-item" onclick="window.location.href='projects/ferring.html'" style="cursor: pointer;">
+            <div class="portfolio-item" data-project="projects/ferring.html" data-category="pharma" style="cursor: pointer;">
                 <img src="assets/portfolio/ferring-cover.jpg" alt="Ferring">
                 <div class="portfolio-overlay">
                     <p class="portfolio-category">Pharmaceutical</p>
@@ -110,7 +110,7 @@
                 </div>
             </div>
             
-            <div class="portfolio-item" onclick="window.location.href='projects/novartis.html'" style="cursor: pointer;">
+            <div class="portfolio-item" data-project="projects/novartis.html" data-category="pharma" style="cursor: pointer;">
                 <img src="assets/portfolio/novartis-cover.jpg" alt="Novartis">
                 <div class="portfolio-overlay">
                     <p class="portfolio-category">Pharmaceutical</p>
@@ -118,7 +118,7 @@
                 </div>
             </div>
             
-            <div class="portfolio-item" onclick="window.location.href='projects/amgen.html'" style="cursor: pointer;">
+            <div class="portfolio-item" data-project="projects/amgen.html" data-category="pharma" style="cursor: pointer;">
                 <img src="assets/portfolio/amgen-cover.jpg" alt="Amgen">
                 <div class="portfolio-overlay">
                     <p class="portfolio-category">Pharmaceutical</p>
@@ -449,6 +449,20 @@
             <button type="submit" class="submit-btn">Send Message</button>
         </form>
     </section>
+
+    <!-- Password Modal -->
+    <div id="password-modal" class="password-modal">
+        <div class="password-modal-content">
+            <h3>Password Required</h3>
+            <p>Enter password to view pharmaceutical projects</p>
+            <input type="password" id="pharma-password" placeholder="Enter password" maxlength="20">
+            <p id="password-error" class="password-error">Incorrect password</p>
+            <div class="password-buttons">
+                <button id="password-submit" class="password-btn">Submit</button>
+                <button id="password-cancel" class="password-btn password-btn-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
