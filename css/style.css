@@ -112,6 +112,11 @@ nav {
     color: var(--text-primary);
 }
 
+.nav-links a.active {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
 /* Hamburger Menu */
 .nav-toggle {
     display: none;
