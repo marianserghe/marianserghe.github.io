@@ -28,6 +28,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Disable right-click on images
+document.addEventListener('contextmenu', function(e) {
+    if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+    }
+});
+
+// Disable drag on images
+document.querySelectorAll('img').forEach(img => {
+    img.setAttribute('draggable', 'false');
+});
+
 // Form submission - let it submit naturally to FormSubmit
 var form = document.querySelector('.contact-form');
 if (form) {
