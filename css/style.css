@@ -56,14 +56,14 @@ nav {
     align-items: center;
 }
 
-/* Option 6: MARIAN SERGHE with gold dot */
+/* Option 6: M · S with gold dot */
 .logo-text {
     display: flex;
     align-items: center;
     text-decoration: none;
-    gap: 6px;
+    gap: 4px;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 20px;
+    font-size: 32px;
     letter-spacing: 2px;
     color: var(--text-primary);
 }
@@ -81,7 +81,8 @@ nav {
 
 .logo-dot {
     color: var(--accent-gold);
-    font-size: 16px;
+    font-size: 28px;
+    line-height: 0;
 }
 
 .logo-lastname {
@@ -616,7 +617,11 @@ footer {
     }
     
     .logo .logo-text {
-        font-size: 16px;
+        font-size: 26px;
+    }
+    
+    .logo .logo-dot {
+        font-size: 22px;
     }
 
     .nav-toggle {
