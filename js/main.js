@@ -10,6 +10,8 @@ if (navToggle && navLinks) {
         if (nav) {
             nav.classList.toggle('menu-open');
         }
+        // Toggle body overflow to prevent scrolling when menu is open
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
     });
 
     // Close menu when clicking a link
@@ -20,6 +22,7 @@ if (navToggle && navLinks) {
             if (nav) {
                 nav.classList.remove('menu-open');
             }
+            document.body.style.overflow = '';
         });
     });
 }
