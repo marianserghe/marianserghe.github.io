@@ -230,7 +230,7 @@
     </div>
 
     <script>
-        const images = [
+        window.galleryImages = [
             '../assets/portfolio/retouching-1.gif',
             '../assets/portfolio/retouching-2.gif',
             '../assets/portfolio/retouching-3.gif',
@@ -247,43 +247,8 @@
             '../assets/portfolio/retouching-14.gif',
             '../assets/portfolio/retouching-15.gif'
         ];
-        let currentImage = 0;
-
-        function openLightbox(index) {
-            currentImage = index;
-            document.getElementById('lightbox-img').src = images[currentImage];
-            document.getElementById('current-num').textContent = currentImage + 1;
-            document.getElementById('lightbox').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox(event) {
-            if (event && event.target !== event.currentTarget) return;
-            document.getElementById('lightbox').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        function prevImage(event) {
-            event.stopPropagation();
-            currentImage = (currentImage - 1 + images.length) % images.length;
-            document.getElementById('lightbox-img').src = images[currentImage];
-            document.getElementById('current-num').textContent = currentImage + 1;
-        }
-
-        function nextImage(event) {
-            event.stopPropagation();
-            currentImage = (currentImage + 1) % images.length;
-            document.getElementById('lightbox-img').src = images[currentImage];
-            document.getElementById('current-num').textContent = currentImage + 1;
-        }
-
-        document.addEventListener('keydown', function(e) {
-            if (!document.getElementById('lightbox').classList.contains('active')) return;
-            if (e.key === 'Escape') closeLightbox();
-            if (e.key === 'ArrowLeft') prevImage(e);
-            if (e.key === 'ArrowRight') nextImage(e);
-        });
+        document.getElementById('total-num').textContent = window.galleryImages.length;
     </script>
-
+    <script src="../js/lightbox.js"></script>
 </body>
 </html>

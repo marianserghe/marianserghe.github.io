@@ -70,13 +70,9 @@
         <div class="image-counter"><span id="current-num">1</span> / <span id="total-num">20</span></div>
     </div>
     <script>
-        const images = ['../assets/portfolio/ferring-0.jpg','../assets/portfolio/ferring-1.jpg','../assets/portfolio/ferring-2.jpg','../assets/portfolio/ferring-3.jpg','../assets/portfolio/ferring-4.jpg','../assets/portfolio/ferring-5.jpg','../assets/portfolio/ferring-6.jpg','../assets/portfolio/ferring-7.jpg','../assets/portfolio/ferring-8.jpg','../assets/portfolio/ferring-9.jpg','../assets/portfolio/ferring-9b.jpg','../assets/portfolio/ferring-10.jpg','../assets/portfolio/ferring-11.jpg','../assets/portfolio/ferring-12.jpg','../assets/portfolio/ferring-13.jpg','../assets/portfolio/ferring-14.jpg','../assets/portfolio/ferring-15.jpg','../assets/portfolio/ferring-16.jpg','../assets/portfolio/ferring-17.jpg','../assets/portfolio/ferring-18.jpg'];
-        let currentImage = 0;
-        function openLightbox(index) { currentImage = index; document.getElementById('lightbox-img').src = images[currentImage]; document.getElementById('current-num').textContent = currentImage + 1; document.getElementById('lightbox').classList.add('active'); document.body.style.overflow = 'hidden'; }
-        function closeLightbox(event) { if (event && event.target !== event.currentTarget) return; document.getElementById('lightbox').classList.remove('active'); document.body.style.overflow = ''; }
-        function prevImage(event) { event.stopPropagation(); currentImage = (currentImage - 1 + images.length) % images.length; document.getElementById('lightbox-img').src = images[currentImage]; document.getElementById('current-num').textContent = currentImage + 1; }
-        function nextImage(event) { event.stopPropagation(); currentImage = (currentImage + 1) % images.length; document.getElementById('lightbox-img').src = images[currentImage]; document.getElementById('current-num').textContent = currentImage + 1; }
-        document.addEventListener('keydown', function(e) { if (!document.getElementById('lightbox').classList.contains('active')) return; if (e.key === 'Escape') closeLightbox(); if (e.key === 'ArrowLeft') prevImage(e); if (e.key === 'ArrowRight') nextImage(e); });
+        window.galleryImages = ['../assets/portfolio/ferring-0.jpg','../assets/portfolio/ferring-1.jpg','../assets/portfolio/ferring-2.jpg','../assets/portfolio/ferring-3.jpg','../assets/portfolio/ferring-4.jpg','../assets/portfolio/ferring-5.jpg','../assets/portfolio/ferring-6.jpg','../assets/portfolio/ferring-7.jpg','../assets/portfolio/ferring-8.jpg','../assets/portfolio/ferring-9.jpg','../assets/portfolio/ferring-9b.jpg','../assets/portfolio/ferring-10.jpg','../assets/portfolio/ferring-11.jpg','../assets/portfolio/ferring-12.jpg','../assets/portfolio/ferring-13.jpg','../assets/portfolio/ferring-14.jpg','../assets/portfolio/ferring-15.jpg','../assets/portfolio/ferring-16.jpg','../assets/portfolio/ferring-17.jpg','../assets/portfolio/ferring-18.jpg'];
+        document.getElementById('total-num').textContent = window.galleryImages.length;
     </script>
+    <script src="../js/lightbox.js"></script>
 </body>
 </html>

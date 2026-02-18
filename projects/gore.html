@@ -60,13 +60,9 @@
         <div class="image-counter"><span id="current-num">1</span> / <span id="total-num">10</span></div>
     </div>
     <script>
-        const images = ['../assets/portfolio/gore-1.jpg','../assets/portfolio/gore-2.jpg','../assets/portfolio/gore-3.jpg','../assets/portfolio/gore-4.jpg','../assets/portfolio/gore-5.jpg','../assets/portfolio/gore-6.jpg','../assets/portfolio/gore-7.jpg','../assets/portfolio/gore-8.jpg','../assets/portfolio/gore-9.jpg','../assets/portfolio/gore-10.jpg'];
-        let currentImage = 0;
-        function openLightbox(index) { currentImage = index; document.getElementById('lightbox-img').src = images[currentImage]; document.getElementById('current-num').textContent = currentImage + 1; document.getElementById('lightbox').classList.add('active'); document.body.style.overflow = 'hidden'; }
-        function closeLightbox(event) { if (event && event.target !== event.currentTarget) return; document.getElementById('lightbox').classList.remove('active'); document.body.style.overflow = ''; }
-        function prevImage(event) { event.stopPropagation(); currentImage = (currentImage - 1 + images.length) % images.length; document.getElementById('lightbox-img').src = images[currentImage]; document.getElementById('current-num').textContent = currentImage + 1; }
-        function nextImage(event) { event.stopPropagation(); currentImage = (currentImage + 1) % images.length; document.getElementById('lightbox-img').src = images[currentImage]; document.getElementById('current-num').textContent = currentImage + 1; }
-        document.addEventListener('keydown', function(e) { if (!document.getElementById('lightbox').classList.contains('active')) return; if (e.key === 'Escape') closeLightbox(); if (e.key === 'ArrowLeft') prevImage(e); if (e.key === 'ArrowRight') nextImage(e); });
+        window.galleryImages = ['../assets/portfolio/gore-1.jpg','../assets/portfolio/gore-2.jpg','../assets/portfolio/gore-3.jpg','../assets/portfolio/gore-4.jpg','../assets/portfolio/gore-5.jpg','../assets/portfolio/gore-6.jpg','../assets/portfolio/gore-7.jpg','../assets/portfolio/gore-8.jpg','../assets/portfolio/gore-9.jpg','../assets/portfolio/gore-10.jpg'];
+        document.getElementById('total-num').textContent = window.galleryImages.length;
     </script>
+    <script src="../js/lightbox.js"></script>
 </body>
 </html>
