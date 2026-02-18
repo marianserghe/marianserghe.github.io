@@ -58,31 +58,26 @@ nav {
 
 /* Option 3: MS with gold bar */
 .logo-mark {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
     gap: 5px;
-    color: var(--text-primary);
+    color: #ffffff;
 }
 
 .logo-ms {
-    color: var(--text-primary);
     font-family: 'Bebas Neue', sans-serif;
     font-size: 32px;
-    letter-spacing: 5px;
+    letter-spacing: 0;
     line-height: 1;
-    margin-right: -5px;
+    color: #ffffff;
 }
 
 .logo-bar {
-    width: 40px;
+    width: 32px;
     height: 2px;
-    background: var(--accent-gold);
-}
-
-.logo-mark:hover {
-    color: var(--text-primary);
+    background: #c9a962;
 }
 
 .logo-mark:hover .logo-ms {
@@ -90,7 +85,7 @@ nav {
 }
 
 .logo-mark:hover .logo-bar {
-    box-shadow: 0 0 10px var(--accent-gold);
+    box-shadow: 0 0 10px #c9a962;
 }
 
 .logo-mark:focus {
@@ -618,12 +613,10 @@ footer {
     
     .logo .logo-ms {
         font-size: 26px;
-        letter-spacing: 4px;
-        margin-right: -4px;
     }
     
     .logo .logo-bar {
-        width: 32px;
+        width: 26px;
     }
 
     .nav-toggle {
