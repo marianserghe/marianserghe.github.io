@@ -65,6 +65,12 @@ nav {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 20px;
     letter-spacing: 2px;
+    color: var(--text-primary);
+}
+
+.logo-text:hover {
+    color: var(--text-primary);
+    text-decoration: none;
 }
 
 .logo-firstname {
