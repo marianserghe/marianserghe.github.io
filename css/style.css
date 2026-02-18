@@ -195,7 +195,7 @@ nav {
 }
 
 .hero-divider {
-    width: 64px;
+    width: 128px;
     height: 3px;
     background: var(--accent-gold);
     margin: 0 auto 15px auto;
