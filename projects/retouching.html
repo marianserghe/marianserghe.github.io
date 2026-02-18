@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retouching — Marian Serghe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            padding: 100px 50px 50px;
+        }
+        .back-link {
+            position: fixed;
+            top: 30px;
+            left: 50px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            z-index: 100;
+        }
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+        .header {
+            max-width: 1200px;
+            margin: 0 auto 60px;
+        }
+        .header h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(48px, 8vw, 80px);
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        .header .category {
+            font-size: 14px;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        .header .description {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            line-height: 1.7;
+        }
+        
+        /* Thumbnail Gallery Grid */
+        .gallery {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 12px;
+            aspect-ratio: 4/5;
+            background: var(--bg-card);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease, opacity 0.3s ease;
+            opacity: 0.85;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+            opacity: 1;
+        }
+        
+        /* Lightbox Overlay */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: color 0.3s ease;
+            z-index: 1001;
+        }
+        .lightbox-close:hover {
+            color: var(--text-primary);
+        }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 60px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 20px;
+            transition: color 0.3s ease;
+            user-select: none;
+            z-index: 1001;
+        }
+        .lightbox-nav:hover {
+            color: var(--text-primary);
+        }
+        .lightbox-prev {
+            left: 20px;
+        }
+        .lightbox-next {
+            right: 20px;
+        }
+        .image-counter {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--text-secondary);
+            font-size: 14px;
+            z-index: 1001;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 80px 20px 40px;
+            }
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .lightbox-nav {
+                font-size: 40px;
+                padding: 10px;
+            }
+            .lightbox-prev { left: 10px; }
+            .lightbox-next { right: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="../index.html#work" class="back-link">← Back to Portfolio</a>
+    
+    <div class="header">
+        <p class="category">Post-Production</p>
+        <h1>Retouching</h1>
+        <p class="description">High-end photo retouching and image manipulation for advertising and editorial. Color correction, compositing, skin retouching, and background work—transforming raw photography into polished, print-ready visuals that deliver impact while maintaining natural authenticity.</p>
+    </div>
+
+    <div class="gallery">
+        <div class="gallery-item" onclick="openLightbox(0)">
+            <img src="../assets/portfolio/retouching-1.gif" alt="Retouching">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(1)">
+            <img src="../assets/portfolio/retouching-2.gif" alt="Retouching">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(2)">
+            <img src="../assets/portfolio/retouching-3.gif" alt="Retouching">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(3)">
+            <img src="../assets/portfolio/retouching-4.gif" alt="Retouching">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(4)">
+            <img src="../assets/portfolio/retouching-5.gif" alt="Retouching">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(5)">
+            <img src="../assets/portfolio/retouching-6.gif" alt="Retouching">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(6)">
+            <img src="../assets/portfolio/retouching-7.gif" alt="Retouching">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(7)">
+            <img src="../assets/portfolio/retouching-8.gif" alt="Retouching">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(8)">
+            <img src="../assets/portfolio/retouching-9.gif" alt="Retouching">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(9)">
+            <img src="../assets/portfolio/retouching-10.gif" alt="Retouching">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(10)">
+            <img src="../assets/portfolio/retouching-11.gif" alt="Retouching">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(11)">
+            <img src="../assets/portfolio/retouching-12.gif" alt="Retouching">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(12)">
+            <img src="../assets/portfolio/retouching-13.gif" alt="Retouching">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(13)">
+            <img src="../assets/portfolio/retouching-14.gif" alt="Retouching">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(14)">
+            <img src="../assets/portfolio/retouching-15.gif" alt="Retouching">
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="prevImage(event)">‹</span>
+        <img src="" id="lightbox-img" alt="Retouching">
+        <span class="lightbox-nav lightbox-next" onclick="nextImage(event)">›</span>
+        <div class="image-counter"><span id="current-num">1</span> / <span id="total-num">15</span></div>
+    </div>
+
+    <script>
+        const images = [
+            '../assets/portfolio/retouching-1.gif',
+            '../assets/portfolio/retouching-2.gif',
+            '../assets/portfolio/retouching-3.gif',
+            '../assets/portfolio/retouching-4.gif',
+            '../assets/portfolio/retouching-5.gif',
+            '../assets/portfolio/retouching-6.gif',
+            '../assets/portfolio/retouching-7.gif',
+            '../assets/portfolio/retouching-8.gif',
+            '../assets/portfolio/retouching-9.gif',
+            '../assets/portfolio/retouching-10.gif',
+            '../assets/portfolio/retouching-11.gif',
+            '../assets/portfolio/retouching-12.gif',
+            '../assets/portfolio/retouching-13.gif',
+            '../assets/portfolio/retouching-14.gif',
+            '../assets/portfolio/retouching-15.gif'
+        ];
+        let currentImage = 0;
+
+        function openLightbox(index) {
+            currentImage = index;
+            document.getElementById('lightbox-img').src = images[currentImage];
+            document.getElementById('current-num').textContent = currentImage + 1;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+            if (event && event.target !== event.currentTarget) return;
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function prevImage(event) {
+            event.stopPropagation();
+            currentImage = (currentImage - 1 + images.length) % images.length;
+            document.getElementById('lightbox-img').src = images[currentImage];
+            document.getElementById('current-num').textContent = currentImage + 1;
+        }
+
+        function nextImage(event) {
+            event.stopPropagation();
+            currentImage = (currentImage + 1) % images.length;
+            document.getElementById('lightbox-img').src = images[currentImage];
+            document.getElementById('current-num').textContent = currentImage + 1;
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (!document.getElementById('lightbox').classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') prevImage(e);
+            if (e.key === 'ArrowRight') nextImage(e);
+        });
+    </script>
+
+</body>
+</html>

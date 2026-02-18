@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marian Serghe — Beauty Artist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+<!-- <style> 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #0f0f0f;
+            --bg-card: #141414;
+            --text-primary: #ffffff;
+            --text-secondary: #86868b;
+            --text-muted: #6e6e73;
+            --accent: #f5f5f7;
+            --accent-gold: #c9a962;
+            --border: rgba(255,255,255,0.1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Barlow', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+
+        .logo img {
+            height: 54px;
+            width: auto;
+        }
+
+        .logo a:focus {
+            outline: none;
+        }
+
+        .logo a:hover img {
+            opacity: 0.9;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, rgba(201,169,98,0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-subtitle {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(64px, 12vw, 120px);
+            font-weight: 400;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+        }
+
+        .hero-tagline {
+            font-size: clamp(18px, 3vw, 24px);
+            font-weight: 300;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+        }
+
+        .hero-brands {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 60px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+        }
+
+        .hero-brands span {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 1s forwards, bounce 2s ease-in-out infinite 1.5s;
+        }
+
+        .scroll-indicator svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--text-muted);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 120px 50px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 11px;
+            font-weight: 400;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(40px, 6vw, 64px);
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            aspect-ratio: 4/5;
+            overflow: hidden;
+            background: var(--bg-card);
+            cursor: pointer;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.02);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease, opacity 0.4s ease, filter 0.4s ease;
+            opacity: 0.75;
+            filter: grayscale(100%);
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 40px 30px;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .portfolio-category {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .portfolio-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--bg-secondary);
+            padding: 120px 50px;
+            margin: 0;
+            max-width: none;
+        }
+
+        .about-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .about-text p:first-of-type {
+            font-size: 24px;
+            color: var(--text-primary);
+            font-weight: 300;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .stat {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 56px;
+            letter-spacing: 1px;
+            color: var(--accent-gold);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 20px;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+        }
+
+        /* Brands Section */
+        .brands {
+            text-align: center;
+            padding: 80px 50px;
+            background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
+        }
+
+        .brands-title {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        .brands-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .brand-item {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            letter-spacing: 2px;
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+        }
+
+        .brand-item:hover {
+            color: var(--text-primary);
+        }
+
+        /* Contact Section */
+        .contact {
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .contact-intro {
+            font-size: 24px;
+            font-weight: 300;
+            color: var(--text-secondary);
+            margin-bottom: 50px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 20px;
+            font-size: 16px;
+            color: var(--text-primary);
+            font-family: inherit;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 3px rgba(201,169,98,0.1);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            border: none;
+            border-radius: 12px;
+            padding: 18px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent-gold);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 50px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            section {
+                padding: 80px 20px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style> -->
+</head>
+<body>
+    <a id="hero"></a>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo"><a href="#hero" style="text-decoration: none; color: inherit;"><img src="../assets/portfolio/marian-serghe-logo.jpg" alt="Marian Serghe"></a></div>
+        <ul class="nav-links">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <p class="hero-subtitle">Group Art Supervisor</p>
+        <h1 class="hero-title">Marian Serghe</h1>
+        <p class="hero-tagline">Creative leader with 19+ years crafting impactful campaigns for pharmaceutical, automotive, and consumer brands worldwide.</p>
+        
+        <div class="hero-brands">
+            <span>J&J</span>
+            <span>Vertex</span>
+            <span>Mercedes-Benz</span>
+            <span>Novartis</span>
+            <span>Pepsi</span>
+            <span>Nivea</span>
+            <span>Mars</span>
+            <span>Jack Daniels</span>
+        </div>
+
+        <div class="scroll-indicator">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="work">
+        <p class="section-label">Selected Work</p>
+        <h2 class="section-title">Portfolio</h2>
+        
+        <div class="portfolio-grid">
+            <!-- Pharmaceutical -->
+            <div class="portfolio-item">
+                <img src="../assets/portfolio/merck-cover.jpg" alt="Merck">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Pharmaceutical</p>
+                    <h3 class="portfolio-title">Merck</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" onclick="window.location.href='serghe-portfolio-amicus.html'" style="cursor: pointer;">
+                <img src="../assets/portfolio/amicus-cover.jpg" alt="Amicus">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Pharmaceutical</p>
+                    <h3 class="portfolio-title">Amicus</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <img src="../assets/portfolio/gore-cover.jpg" alt="Gore Medical">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Medical Devices</p>
+                    <h3 class="portfolio-title">Gore Medical</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <img src="../assets/portfolio/ferring-cover.jpg" alt="Ferring">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Pharmaceutical</p>
+                    <h3 class="portfolio-title">Ferring</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <img src="../assets/portfolio/novartis-cover.jpg" alt="Novartis">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Pharmaceutical</p>
+                    <h3 class="portfolio-title">Novartis</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <img src="../assets/portfolio/amgen-cover.jpg" alt="Amgen">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Pharmaceutical</p>
+                    <h3 class="portfolio-title">Amgen</h3>
+                </div>
+            </div>
+
+            <!-- Automotive -->
+            <div class="portfolio-item" onclick="window.location.href='serghe-portfolio-freightliner.html'" style="cursor: pointer;">
+                <img src="../assets/portfolio/freightliner-cover.jpg" alt="Freightliner">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Automotive</p>
+                    <h3 class="portfolio-title">Freightliner</h3>
+                </div>
+            </div>
+
+            <div class="portfolio-item" onclick="window.location.href='serghe-portfolio-mercedes.html'" style="cursor: pointer;">
+                <img src="../assets/portfolio/mercedes-cover.jpg" alt="Mercedes-Benz">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Automotive</p>
+                    <h3 class="portfolio-title">Mercedes-Benz</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item">
+                <img src="../assets/portfolio/jaguar-cover.jpg" alt="Jaguar Land Rover">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Automotive</p>
+                    <h3 class="portfolio-title">Jaguar • Land Rover</h3>
+                </div>
+            </div>
+
+            <!-- Consumer Brands -->
+            <div class="portfolio-item" onclick="window.location.href='serghe-portfolio-beauty.html'" style="cursor: pointer;">
+                <img src="../assets/portfolio/beauty-cover.jpg" alt="Beauty Campaign" style="transform: scale(1.02); transform-origin: center; object-position: top center;">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Consumer</p>
+                    <h3 class="portfolio-title">Beauty • Nivea</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" onclick="window.location.href='serghe-portfolio-jack-daniels.html'" style="cursor: pointer;">
+                <img src="../assets/portfolio/serghe-portfolio-jack-daniels.jpg" alt="Jack Daniels Campaign">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Consumer</p>
+                    <h3 class="portfolio-title">Jack Daniels • Bar Ads & Promotions</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" onclick="window.location.href='serghe-portfolio-sobranie.html'" style="cursor: pointer;">
+                <img src="../assets/portfolio/sobranie-cover.jpg" alt="Sobranie Campaign" style="object-fit: cover;">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Consumer</p>
+                    <h3 class="portfolio-title">Sobranie • JTI</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" onclick="window.location.href='serghe-portfolio-philips.html'" style="cursor: pointer;">
+                <img src="../assets/portfolio/philips-cover.jpg" alt="Philips Campaign">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Consumer Electronics</p>
+                    <h3 class="portfolio-title">Philips</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" onclick="window.location.href='serghe-portfolio-packaging.html'" style="cursor: pointer;">
+                <img src="../assets/portfolio/packaging-cover.png" alt="Packaging Design">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Design</p>
+                    <h3 class="portfolio-title">Packaging Design</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <p class="section-label">About</p>
+                <h2 class="section-title">19 Years of Creative Excellence</h2>
+                <p>Group Art Supervisor, Art Director, and Senior Designer with extensive experience in brand building, advertising, marketing, and design for pharmaceutical, automotive, and consumer brands.</p>
+                <p>Skilled in client and vendor relations, cross-cultural communication, and leading creative teams from concept to finished art. Proven track record delivering high-impact campaigns for Fortune 500 companies.</p>
+                
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">19+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Brand Partnerships</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Campaigns Delivered</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <div style="width:100%;aspect-ratio:3/4;border-radius:20px;background:linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);display:flex;align-items:center;justify-content:center;">
+                    <span style="font-size:80px;opacity:0.2;">MS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section style="padding: 80px 50px; max-width: 1400px; margin: 0 auto;">
+        <p class="section-label">Expertise</p>
+        <h2 class="section-title">Skills & Tools</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">Photoshop</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">Illustrator</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">InDesign</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">Figma</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">Lightroom</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">Adobe Premiere</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">Acrobat</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">Keynote</span>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" style="padding: 80px 50px 120px; max-width: 1400px; margin: 0 auto; background: var(--bg-secondary);">
+        <p class="section-label">Experience</p>
+        <h2 class="section-title">Career Journey</h2>
+        
+        <div style="display: flex; flex-direction: column; gap: 40px;">
+            <!-- Current -->
+            <div style="border-left: 2px solid var(--accent-gold); padding-left: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+                    <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px; font-weight: 400;">Group Art Supervisor</h3>
+                    <span style="color: var(--accent-gold); font-size: 14px; font-weight: 500;">Jan 2025 – Present</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 12px;">Fingerpaint Group · Cedar Knolls, NJ</p>
+                <p style="color: var(--text-muted); font-size: 14px; line-height: 1.7;">Leading creative for J&J (IMAAVY - generalized myasthenia gravis). Directing concept development, mentoring art directors, and managing multiple concurrent projects with cross-functional teams.</p>
+            </div>
+
+            <!-- FCBCURE -->
+            <div style="border-left: 2px solid var(--border); padding-left: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+                    <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px; font-weight: 400;">Art Supervisor</h3>
+                    <span style="color: var(--text-muted); font-size: 14px;">Feb 2018 – Dec 2024</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 12px;">FCBCURE · Parsippany, NJ</p>
+                <p style="color: var(--text-muted); font-size: 14px; line-height: 1.7;">Key clients: <strong style="color: var(--text-secondary);">Vertex Pharmaceuticals</strong> (Symdeko, Trikafta, Orkambi, Kalydeco), <strong style="color: var(--text-secondary);">Gore Medical</strong> (Gore-Tex devices), <strong style="color: var(--text-secondary);">Merck</strong>, <strong style="color: var(--text-secondary);">Amicus</strong>. Established visual brand systems, style guides, and packaging for major pharmaceutical launches.</p>
+            </div>
+
+            <!-- NEON -->
+            <div style="border-left: 2px solid var(--border); padding-left: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+                    <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px; font-weight: 400;">Art Supervisor</h3>
+                    <span style="color: var(--text-muted); font-size: 14px;">Aug 2016 – Feb 2018</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 12px;">NEON (FCB Health Network) · New York, NY</p>
+                <p style="color: var(--text-muted); font-size: 14px; line-height: 1.7;">Executed creative for <strong style="color: var(--text-secondary);">Novartis COSENTYX</strong> (psoriasis). Developed multiple campaigns in partnership with senior copywriters and account teams.</p>
+            </div>
+
+            <!-- FCBCURE 2015-2016 -->
+            <div style="border-left: 2px solid var(--border); padding-left: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+                    <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px; font-weight: 400;">Art Supervisor</h3>
+                    <span style="color: var(--text-muted); font-size: 14px;">Sep 2015 – Aug 2016</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 12px;">FCBCURE · Parsippany, NJ</p>
+                <p style="color: var(--text-muted); font-size: 14px; line-height: 1.7;">Led creative for <strong style="color: var(--text-secondary);">Amgen KYPROLIS</strong> (oncology). Developed concepts from ideation through final production, directed photographers and illustrators, supervised art directors and freelancers.</p>
+            </div>
+
+            <!-- SPARK44 -->
+            <div style="border-left: 2px solid var(--border); padding-left: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+                    <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px; font-weight: 400;">Senior Designer</h3>
+                    <span style="color: var(--text-muted); font-size: 14px;">Jun 2015 – Sep 2015</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 12px;">SPARK44 · New York, NY</p>
+                <p style="color: var(--text-muted); font-size: 14px; line-height: 1.7;">Designed digital and social campaigns for <strong style="color: var(--text-secondary);">Jaguar & Land Rover</strong>. Online banner ads, mobile ads, social media content, website design, brochures, and email campaigns.</p>
+            </div>
+
+            <!-- Mercedes-Benz -->
+            <div style="border-left: 2px solid var(--border); padding-left: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+                    <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px; font-weight: 400;">Art Director / Senior Designer</h3>
+                    <span style="color: var(--text-muted); font-size: 14px;">Sep 2012 – Jun 2015</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 12px;">Mercedes-Benz USA · Montvale, NJ</p>
+                <p style="color: var(--text-muted); font-size: 14px; line-height: 1.7;">Led creative for Mercedes-Benz Sprinter Van and Metris campaigns. Event branding, direct mail, digital, and award-winning print advertising for Sprinter and Freightliner brands.</p>
+            </div>
+
+            <!-- Earlier Career -->
+            <div style="border-left: 2px solid var(--border); padding-left: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+                    <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px; font-weight: 400;">Earlier Career</h3>
+                    <span style="color: var(--text-muted); font-size: 14px;">2005 – 2012</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 12px;">FCB · BBDO · Yellow Pages Group</p>
+                <p style="color: var(--text-muted); font-size: 14px; line-height: 1.7;">Built foundation working on global brands: <strong style="color: var(--text-secondary);">Pepsi, Wrigley, Snickers, Mars, Nivea, Jack Daniels, Vodafone, Philips, Kraft (Oreo, Milka), JTI (Camel), Chevrolet, Dacia, Tuborg</strong> — packaging, press, outdoor, POS, and promotional campaigns.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands">
+        <p class="brands-title">Brands I've Worked With</p>
+        <div class="brands-grid">
+            <span class="brand-item">FREIGHTLINER</span>
+            <span class="brand-item">MERCK</span>
+            <span class="brand-item">AMICUS</span>
+            <span class="brand-item">GORE MEDICAL</span>
+            <span class="brand-item">FERRING</span>
+            <span class="brand-item">NOVARTIS</span>
+            <span class="brand-item">MERCK</span>
+            <span class="brand-item">AMGEN</span>
+            <span class="brand-item">GORE</span>
+            <span class="brand-item">MERCEDES-BENZ</span>
+            <span class="brand-item">JAGUAR • LAND ROVER</span>
+            <span class="brand-item">NIVEA</span>
+            <span class="brand-item">JACK DANIELS</span>
+            <span class="brand-item">VODAFONE</span>
+            <span class="brand-item">PHILIPS</span>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <p class="section-label">Get in Touch</p>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="contact-intro">Have a project in mind? I'd love to hear about it. Send me a message and let's create something beautiful.</p>
+        
+        <form class="contact-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Project inquiry">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell me about your project..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <p style="color: var(--text-muted); font-size: 14px;">© 2026 Marian Serghe. All rights reserved.</p>
+        <div class="footer-social">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">LI</a>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script> -->
+<!-- <script> 
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Form submission handler
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I\'ll get back to you soon.');
+            this.reset();
+        });
+    </script> -->
+</body>
+</html>

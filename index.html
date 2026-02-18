@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marian Serghe — Group Art Supervisor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a id="hero"></a>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo"><a href="#hero" style="text-decoration: none; color: inherit;"><img src="assets/images/logo.jpg" alt="Marian Serghe"></a></div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <p class="hero-subtitle">Group Art Supervisor</p>
+        <h1 class="hero-title">Marian Serghe</h1>
+        <p class="hero-tagline">Creative leader with 19+ years crafting impactful campaigns for pharmaceutical, automotive, and consumer brands worldwide.</p>
+        
+        <div class="hero-brands">
+            <span>J&J</span>
+            <span>Vertex</span>
+            <span>Merck</span>
+            <span>Amgen</span>
+            <span>Novartis</span>
+            <span>Amicus</span>
+            <span>Ferring</span>
+            <span>Gore Medical</span>
+            <span>Mercedes-Benz</span>
+            <span>Pepsi</span>
+            <span>Nivea</span>
+        </div>
+
+        <div class="scroll-indicator">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="work">
+        <p class="section-label">Selected Work</p>
+        <h2 class="section-title">Portfolio</h2>
+        
+        <div class="portfolio-grid">
+            <!-- Pharmaceutical -->
+            <div class="portfolio-item" onclick="window.location.href='projects/merck.html'" style="cursor: pointer;">
+                <img src="assets/portfolio/merck-cover.jpg" alt="Merck">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Pharmaceutical</p>
+                    <h3 class="portfolio-title">Merck</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" onclick="window.location.href='projects/amicus.html'" style="cursor: pointer;">
+                <img src="assets/portfolio/amicus-cover.jpg" alt="Amicus">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Pharmaceutical</p>
+                    <h3 class="portfolio-title">Amicus</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" onclick="window.location.href='projects/gore.html'" style="cursor: pointer;">
+                <img src="assets/portfolio/gore-cover.jpg" alt="Gore Medical">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Medical Devices</p>
+                    <h3 class="portfolio-title">Gore Medical</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" onclick="window.location.href='projects/ferring.html'" style="cursor: pointer;">
+                <img src="assets/portfolio/ferring-cover.jpg" alt="Ferring">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Pharmaceutical</p>
+                    <h3 class="portfolio-title">Ferring</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" onclick="window.location.href='projects/novartis.html'" style="cursor: pointer;">
+                <img src="assets/portfolio/novartis-cover.jpg" alt="Novartis">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Pharmaceutical</p>
+                    <h3 class="portfolio-title">Novartis</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" onclick="window.location.href='projects/amgen.html'" style="cursor: pointer;">
+                <img src="assets/portfolio/amgen-cover.jpg" alt="Amgen">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Pharmaceutical</p>
+                    <h3 class="portfolio-title">Amgen</h3>
+                </div>
+            </div>
+
+            <!-- Automotive -->
+            <div class="portfolio-item" onclick="window.location.href='projects/freightliner.html'" style="cursor: pointer;">
+                <img src="assets/portfolio/freightliner-cover.jpg" alt="Freightliner">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Automotive</p>
+                    <h3 class="portfolio-title">Freightliner</h3>
+                </div>
+            </div>
+
+            <div class="portfolio-item" onclick="window.location.href='projects/mercedes.html'" style="cursor: pointer;">
+                <img src="assets/portfolio/mercedes-cover.jpg" alt="Mercedes-Benz">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Automotive</p>
+                    <h3 class="portfolio-title">Mercedes-Benz</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" onclick="window.location.href='projects/jaguar.html'" style="cursor: pointer;">
+                <img src="assets/portfolio/jaguar-cover.jpg" alt="Jaguar Land Rover">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Automotive</p>
+                    <h3 class="portfolio-title">Jaguar • Land Rover</h3>
+                </div>
+            </div>
+
+            <!-- Consumer Brands -->
+            <div class="portfolio-item" onclick="window.location.href='projects/beauty.html'" style="cursor: pointer;">
+                <img src="assets/portfolio/beauty-cover.jpg" alt="Beauty Campaign" style="transform: scale(1.02); transform-origin: center; object-position: top center;">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Consumer</p>
+                    <h3 class="portfolio-title">Beauty • Nivea</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" onclick="window.location.href='projects/jack-daniels.html'" style="cursor: pointer;">
+                <img src="assets/portfolio/serghe-portfolio-jack-daniels.jpg" alt="Jack Daniels Campaign">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Consumer</p>
+                    <h3 class="portfolio-title">Jack Daniels • Bar Ads & Promotions</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" onclick="window.location.href='projects/sobranie.html'" style="cursor: pointer;">
+                <img src="assets/portfolio/sobranie-cover.jpg" alt="Sobranie Campaign" style="object-fit: cover;">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Consumer</p>
+                    <h3 class="portfolio-title">Sobranie • JTI</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" onclick="window.location.href='projects/philips.html'" style="cursor: pointer;">
+                <img src="assets/portfolio/philips-cover.jpg" alt="Philips Campaign">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Consumer Electronics</p>
+                    <h3 class="portfolio-title">Philips</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" onclick="window.location.href='projects/packaging.html'" style="cursor: pointer;">
+                <img src="assets/portfolio/packaging-cover.png" alt="Packaging Design">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Design</p>
+                    <h3 class="portfolio-title">Packaging Design</h3>
+                </div>
+            </div>
+            
+            <div class="portfolio-item" onclick="window.location.href='projects/retouching.html'" style="cursor: pointer;">
+                <img src="assets/portfolio/retouching-cover.jpg" alt="Retouching">
+                <div class="portfolio-overlay">
+                    <p class="portfolio-category">Post-Production</p>
+                    <h3 class="portfolio-title">Retouching</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <p class="section-label">About</p>
+                <h2 class="section-title">19 Years of Creative Excellence</h2>
+                <p>I've spent my career at the intersection of creativity and strategy, where design becomes a tool for connection, not just expression. Leading creative for global healthcare and automotive brands has taught me that the best work happens when craft serves purpose.</p>
+                <p>I bring precision to every detail and intention to every decision—whether guiding a team through a pharmaceutical launch or shaping a brand's visual identity. The goal is always the same: work that resonates, endures, and actually works.</p>
+                
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">19+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Brand Partnerships</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Campaigns Delivered</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="assets/about-bg.jpg" alt="Marian Serghe" style="opacity: 0.75;">
+            </div>
+        </div>
+        
+        <!-- Mobile-only header with image inline -->
+        <div class="about-header-mobile">
+            <div class="about-image-mobile">
+                <img src="assets/about-bg.jpg" alt="Marian Serghe">
+            </div>
+            <div>
+                <p class="section-label">About</p>
+                <h2 class="section-title">19 Years of Creative Excellence</h2>
+            </div>
+        </div>
+        <div class="about-text-mobile">
+            <p>I've spent my career at the intersection of creativity and strategy, where design becomes a tool for connection, not just expression. Leading creative for global healthcare and automotive brands has taught me that the best work happens when craft serves purpose.</p>
+            <p>I bring precision to every detail and intention to every decision—whether guiding a team through a pharmaceutical launch or shaping a brand's visual identity. The goal is always the same: work that resonates, endures, and actually works.</p>
+            
+            <div class="about-stats">
+                <div class="stat">
+                    <div class="stat-number">19+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Brand Partnerships</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Campaigns Delivered</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section style="padding: 80px 50px; max-width: 1400px; margin: 0 auto;">
+        <p class="section-label">Expertise</p>
+        <h2 class="section-title">Skills & Tools</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">Photoshop</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">Illustrator</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">InDesign</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">Figma</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">Lightroom</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">Adobe Premiere</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">Acrobat</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">Keynote</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">Workfront</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">Slack/Teams</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">HTML/CSS</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">High-End Retouching</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">Veeva Vault</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">MLR Review Process</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">AMA Style</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">Prepress</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border); padding: 12px 24px; border-radius: 30px; font-size: 14px;">Color Management</span>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" style="padding: 80px 50px 120px; max-width: 1400px; margin: 0 auto; background: var(--bg-secondary);">
+        <p class="section-label">Experience</p>
+        <h2 class="section-title">Career Journey</h2>
+        
+        <div style="display: flex; flex-direction: column; gap: 40px;">
+            <!-- Current -->
+            <div style="border-left: 2px solid var(--accent-gold); padding-left: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+                    <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px; font-weight: 400;">Group Art Supervisor</h3>
+                    <span style="color: var(--accent-gold); font-size: 14px; font-weight: 500;">Jan 2025 – Present</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 12px;">Fingerpaint Group · Cedar Knolls, NJ</p>
+                <p style="color: var(--text-muted); font-size: 14px; line-height: 1.7;">Leading creative for <strong style="color: var(--text-secondary);">J&J</strong> (IMAAVY - generalized myasthenia gravis). Directing concept development from strategy through execution, mentoring art directors and designers, managing multiple concurrent projects with cross-functional teams, and presenting creative solutions to senior leadership and clients.</p>
+            </div>
+
+            <!-- FCBCURE -->
+            <div style="border-left: 2px solid var(--border); padding-left: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+                    <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px; font-weight: 400;">Art Supervisor</h3>
+                    <span style="color: var(--text-muted); font-size: 14px;">Feb 2018 – Dec 2024</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 12px;">FCBCURE · Parsippany, NJ</p>
+                <p style="color: var(--text-muted); font-size: 14px; line-height: 1.7;">Key clients: <strong style="color: var(--text-secondary);">Vertex Pharmaceuticals</strong> (Symdeko, Trikafta, Orkambi, Kalydeco), <strong style="color: var(--text-secondary);">Gore Medical</strong> (Gore-Tex devices), <strong style="color: var(--text-secondary);">Merck</strong>, <strong style="color: var(--text-secondary);">Amicus</strong>. Established visual brand systems, style guides, and packaging for major pharmaceutical launches. Directed photography and illustration, managed production timelines, and collaborated with medical writers to ensure scientific accuracy across all touchpoints.</p>
+            </div>
+
+            <!-- NEON -->
+            <div style="border-left: 2px solid var(--border); padding-left: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+                    <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px; font-weight: 400;">Art Supervisor</h3>
+                    <span style="color: var(--text-muted); font-size: 14px;">Aug 2016 – Feb 2018</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 12px;">NEON (FCB Health Network) · New York, NY</p>
+                <p style="color: var(--text-muted); font-size: 14px; line-height: 1.7;">Executed creative for <strong style="color: var(--text-secondary);">Novartis COSENTYX</strong> (psoriasis). Developed multiple campaigns in partnership with senior copywriters and account teams. Created print, digital, and multichannel executions from concept through production, ensuring brand consistency across patient and HCP audiences.</p>
+            </div>
+
+            <!-- FCBCURE 2015-2016 -->
+            <div style="border-left: 2px solid var(--border); padding-left: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+                    <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px; font-weight: 400;">Art Supervisor</h3>
+                    <span style="color: var(--text-muted); font-size: 14px;">Sep 2015 – Aug 2016</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 12px;">FCBCURE · Parsippany, NJ</p>
+                <p style="color: var(--text-muted); font-size: 14px; line-height: 1.7;">Led creative for <strong style="color: var(--text-secondary);">Amgen KYPROLIS</strong> (oncology). Developed concepts from ideation through final production, directed photographers and illustrators, supervised art directors and freelancers. Managed MLR review processes and collaborated with medical and regulatory teams to ensure compliance while maintaining creative impact.</p>
+            </div>
+
+            <!-- SPARK44 -->
+            <div style="border-left: 2px solid var(--border); padding-left: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+                    <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px; font-weight: 400;">Senior Art Director / Senior Designer</h3>
+                    <span style="color: var(--text-muted); font-size: 14px;">Jun 2015 – Sep 2015</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 12px;">SPARK44 · New York, NY</p>
+                <p style="color: var(--text-muted); font-size: 14px; line-height: 1.7;">Designed digital and social campaigns for <strong style="color: var(--text-secondary);">Jaguar & Land Rover</strong>. Online banner ads, mobile ads, social media content, website design, brochures, and email campaigns. Adapted global brand creative for regional markets while maintaining premium automotive positioning across all digital touchpoints.</p>
+            </div>
+
+            <!-- Mercedes-Benz -->
+            <div style="border-left: 2px solid var(--border); padding-left: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+                    <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px; font-weight: 400;">Art Director / Senior Designer</h3>
+                    <span style="color: var(--text-muted); font-size: 14px;">Sep 2012 – Jun 2015</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 12px;">Mercedes-Benz USA · Montvale, NJ</p>
+                <p style="color: var(--text-muted); font-size: 14px; line-height: 1.7;">Led creative for <strong style="color: var(--text-secondary);">Mercedes-Benz Sprinter Van</strong> and <strong style="color: var(--text-secondary);">Metris</strong> campaigns. Event branding, direct mail, digital, and award-winning print advertising for <strong style="color: var(--text-secondary);">Sprinter</strong> and <strong style="color: var(--text-secondary);">Freightliner</strong> brands. Developed comprehensive campaign ecosystems from strategy through production, partnered with dealers and event teams, and maintained brand consistency across B2B and consumer audiences.</p>
+            </div>
+
+            <!-- Earlier Career -->
+            <div style="border-left: 2px solid var(--border); padding-left: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+                    <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px; font-weight: 400;">Earlier Career</h3>
+                    <span style="color: var(--text-muted); font-size: 14px;">2005 – 2012</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 12px;">FCB · BBDO · Yellow Pages Group</p>
+                <p style="color: var(--text-muted); font-size: 14px; line-height: 1.7;">Built foundation working on global brands: <strong style="color: var(--text-secondary);">Pepsi, Wrigley, Snickers, Mars, Nivea, Jack Daniels, Vodafone, Philips, Kraft (Oreo, Milka), JTI (Camel), Chevrolet, Dacia, Tuborg</strong> — packaging, press, outdoor, POS, and promotional campaigns. Developed skills across print, outdoor, packaging, and promotional materials while learning to balance creative ambition with client objectives and production realities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands" style="padding-top: 20px;">
+        <p class="brands-title">Brands I've Worked With</p>
+        <div class="brands-grid">
+            <span class="brand-item">J&J</span>
+            <span class="brand-item">VERTEX</span>
+            <span class="brand-item">MERCK</span>
+            <span class="brand-item">AMGEN</span>
+            <span class="brand-item">NOVARTIS</span>
+            <span class="brand-item">AMICUS</span>
+            <span class="brand-item">FERRING</span>
+            <span class="brand-item">GORE MEDICAL</span>
+            <span class="brand-item">FREIGHTLINER</span>
+            <span class="brand-item">MERCEDES-BENZ</span>
+            <span class="brand-item">JAGUAR • LAND ROVER</span>
+            <span class="brand-item">PEPSI</span>
+            <span class="brand-item">NIVEA</span>
+            <span class="brand-item">JACK DANIELS</span>
+            <span class="brand-item">VODAFONE</span>
+            <span class="brand-item">PHILIPS</span>
+            <span class="brand-item">WRIGLEY</span>
+            <span class="brand-item">SNICKERS</span>
+            <span class="brand-item">MARS</span>
+            <span class="brand-item">KRAFT</span>
+            <span class="brand-item">OREO</span>
+            <span class="brand-item">MILKA</span>
+            <span class="brand-item">JTI</span>
+            <span class="brand-item">CAMEL</span>
+            <span class="brand-item">SOBRANIE</span>
+            <span class="brand-item">CHEVROLET</span>
+            <span class="brand-item">DACIA</span>
+            <span class="brand-item">TUBORG</span>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section style="padding: 40px 50px 80px; background: var(--bg-secondary);">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p class="section-label">Education</p>
+            <h2 class="section-title" style="margin-bottom: 30px;">Academic Foundation</h2>
+            
+            <div style="border-left: 2px solid var(--accent-gold); padding-left: 30px;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;">
+                    <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 1px; font-weight: 400;">University POLITEHNICA of Bucharest</h3>
+                    <span style="color: var(--text-muted); font-size: 14px;">2000 – 2005</span>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 12px;">Bachelor of Science</p>
+                <p style="color: var(--text-muted); font-size: 14px; line-height: 1.7;">Hydroelectric Power Engineering</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <p class="section-label">Get in Touch</p>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="contact-intro">Have a project in mind? I'd love to hear about it. Send me a message and let's create something beautiful.</p>
+        
+        <form class="contact-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Project inquiry">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell me about your project..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <p style="color: var(--text-muted); font-size: 14px;">© 2026 Marian Serghe. All rights reserved.</p>
+        <div class="footer-social">
+            <a href="https://linkedin.com/in/marianserghe" aria-label="LinkedIn">LI</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
