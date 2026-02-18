@@ -676,13 +676,17 @@ img {
         z-index: 1003;
     }
 
+    nav.menu-open {
+        background: #0a0a0a !important;
+    }
+
     .nav-links {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background: #0a0a0a;
+        background: #0a0a0a !important;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -694,6 +698,7 @@ img {
 
     .nav-links.active {
         display: flex;
+        background: #0a0a0a !important;
     }
 
     .nav-links a {

@@ -1,11 +1,15 @@
 // Hamburger menu toggle
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
+const nav = document.querySelector('nav');
 
 if (navToggle && navLinks) {
     navToggle.addEventListener('click', function() {
         this.classList.toggle('active');
         navLinks.classList.toggle('active');
+        if (nav) {
+            nav.classList.toggle('menu-open');
+        }
     });
 
     // Close menu when clicking a link
@@ -13,6 +17,9 @@ if (navToggle && navLinks) {
         link.addEventListener('click', function() {
             navToggle.classList.remove('active');
             navLinks.classList.remove('active');
+            if (nav) {
+                nav.classList.remove('menu-open');
+            }
         });
     });
 }
