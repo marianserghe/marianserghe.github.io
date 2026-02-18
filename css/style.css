@@ -673,6 +673,7 @@ img {
 
     .nav-toggle {
         display: flex;
+        z-index: 1003;
     }
 
     .nav-links {
@@ -681,13 +682,14 @@ img {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.98);
+        background: #0a0a0a;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 30px;
         display: none;
-        z-index: 1001;
+        z-index: 1002;
+        padding-top: 60px;
     }
 
     .nav-links.active {
