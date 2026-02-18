@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0a0a0a"/>
+  <!-- MS Logo centered -->
+  <text x="600" y="280" font-family="Arial Black, Arial, sans-serif" font-size="180" fill="#ffffff" text-anchor="middle" letter-spacing="20">MS</text>
+  <!-- Gold underline -->
+  <rect x="350" y="320" width="500" height="12" fill="#c9a962" rx="6"/>
+  <!-- Tagline -->
+  <text x="600" y="420" font-family="Arial, sans-serif" font-size="36" fill="#c9a962" text-anchor="middle" letter-spacing="8">MARIAN SERGHE</text>
+  <text x="600" y="480" font-family="Arial, sans-serif" font-size="24" fill="#666666" text-anchor="middle">Group Art Supervisor</text>
+</svg>
