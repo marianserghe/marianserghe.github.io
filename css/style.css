@@ -198,7 +198,7 @@ nav {
     width: 64px;
     height: 3px;
     background: var(--accent-gold);
-    margin: 0 auto 20px auto;
+    margin: 0 auto 10px auto;
     opacity: 0;
     animation: fadeInUpHero 0.8s ease 0.35s forwards;
 }
