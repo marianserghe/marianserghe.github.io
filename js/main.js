@@ -28,12 +28,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission handler
+// Form submission - let it submit naturally to FormSubmit
 var form = document.querySelector('.contact-form');
 if (form) {
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Thank you for your message! I\'ll get back to you soon.');
-        this.reset();
+    form.addEventListener('submit', function() {
+        // Show loading state on button
+        var btn = this.querySelector('.submit-btn');
+        if (btn) {
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+        }
     });
 }
