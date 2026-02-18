@@ -656,6 +656,22 @@ img {
     pointer-events: auto;
 }
 
+/* Mobile Menu Overlay */
+.mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0a0a0a;
+    z-index: 1000;
+    display: none;
+}
+
+.mobile-overlay.active {
+    display: block;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     nav {
@@ -694,21 +710,6 @@ img {
         gap: 30px;
         display: none;
         z-index: 1002;
-        padding-top: 60px;
-        height: 100vh;
-        width: 100vw;
-        background: #0a0a0a;
-    }
-
-    .nav-links::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: #0a0a0a;
-        z-index: -1;
     }
 
     .nav-links.active {

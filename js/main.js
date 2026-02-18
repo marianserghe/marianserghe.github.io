@@ -2,6 +2,7 @@
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 const nav = document.querySelector('nav');
+const mobileOverlay = document.querySelector('.mobile-overlay');
 
 if (navToggle && navLinks) {
     navToggle.addEventListener('click', function() {
@@ -10,7 +11,9 @@ if (navToggle && navLinks) {
         if (nav) {
             nav.classList.toggle('menu-open');
         }
-        // Toggle body overflow to prevent scrolling when menu is open
+        if (mobileOverlay) {
+            mobileOverlay.classList.toggle('active');
+        }
         document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
     });
 
@@ -22,9 +25,25 @@ if (navToggle && navLinks) {
             if (nav) {
                 nav.classList.remove('menu-open');
             }
+            if (mobileOverlay) {
+                mobileOverlay.classList.remove('active');
+            }
             document.body.style.overflow = '';
         });
     });
+
+    // Close menu when clicking overlay
+    if (mobileOverlay) {
+        mobileOverlay.addEventListener('click', function() {
+            navToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+            if (nav) {
+                nav.classList.remove('menu-open');
+            }
+            mobileOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
 }
 
 // Smooth scroll for navigation
