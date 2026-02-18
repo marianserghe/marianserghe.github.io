@@ -1,4 +1,4 @@
-# Sergiu Portfolio - V1 Dark Gold
+# Serghe Portfolio - V1 Dark Gold
 
 ## Structure
 
