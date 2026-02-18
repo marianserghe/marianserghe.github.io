@@ -169,10 +169,11 @@ if (form) {
         var entered = passwordInput.value;
         
         if (entered === PHARMA_PASSWORD) {
+            var projectUrl = pendingProject;
             unlock();
             hideModal();
-            if (pendingProject) {
-                window.location.href = pendingProject;
+            if (projectUrl) {
+                window.location.href = projectUrl;
             }
         } else {
             errorMsg.classList.add('show');
