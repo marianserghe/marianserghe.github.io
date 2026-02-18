@@ -559,16 +559,18 @@ section {
 footer {
     padding: 60px 50px;
     border-top: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     max-width: 1400px;
     margin: 0 auto;
+    gap: 20px;
 }
 
 .footer-links {
     display: flex;
     gap: 30px;
+    justify-self: start;
 }
 
 .footer-links a {
@@ -585,6 +587,11 @@ footer {
 .footer-social {
     display: flex;
     gap: 20px;
+    justify-self: end;
+}
+
+footer p {
+    justify-self: center;
 }
 
 .footer-social a {
