@@ -63,6 +63,7 @@ nav {
     align-items: center;
     text-decoration: none;
     gap: 4px;
+    color: var(--text-primary);
 }
 
 .logo-ms {
@@ -78,12 +79,20 @@ nav {
     background: var(--accent-gold);
 }
 
+.logo-mark:hover {
+    color: var(--text-primary);
+}
+
 .logo-mark:hover .logo-ms {
     opacity: 0.9;
 }
 
 .logo-mark:hover .logo-bar {
     box-shadow: 0 0 10px var(--accent-gold);
+}
+
+.logo-mark:focus {
+    outline: none;
 }
 
 .nav-links {
