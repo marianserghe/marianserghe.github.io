@@ -827,8 +827,8 @@ img {
         font-size: 14px;
     }
     
-    /* Hide non-pharma brands on mobile */
-    .brand-item:nth-child(n+9) {
+    /* Show first 12 brands on mobile */
+    .brand-item:nth-child(n+13) {
         display: none;
     }
 
