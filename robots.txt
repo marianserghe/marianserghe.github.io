@@ -1,0 +1,6 @@
+# Robots.txt for serghe.com
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.serghe.com/sitemap.xml
